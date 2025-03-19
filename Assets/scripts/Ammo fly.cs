@@ -8,7 +8,14 @@ public class Ammofly : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("llllllllllllllllllllllllllllllllllllllll");
         transform.Translate(Vector3.forward * Time.deltaTime * Ammo_speed);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacles"))
+        {
+         Destroy(collision.gameObject);
+        }
+    }
+
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7591838853333252464
+--- !u!1 &3527456405549404527
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3418552296217812923}
-  - component: {fileID: 44601569059696918}
-  - component: {fileID: -7776147303548845514}
+  - component: {fileID: 5344359707141455389}
+  - component: {fileID: 1738475994707271030}
+  - component: {fileID: 5689085955647282461}
+  - component: {fileID: 915300436421368264}
   m_Layer: 0
   m_Name: Pinguin_001
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3418552296217812923
+--- !u!4 &5344359707141455389
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7591838853333252464}
+  m_GameObject: {fileID: 3527456405549404527}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0010017995, y: 0.050562978, z: -0.16183415}
+  m_LocalRotation: {x: -0, y: 0.3618207, z: -0, w: 0.9322477}
+  m_LocalPosition: {x: 8.725, y: 7.67, z: 119.72}
   m_LocalScale: {x: 0.9110442, y: 0.9110442, z: 0.9110442}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3063299183288232493}
+  - {fileID: 2748862795311034146}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &44601569059696918
+  m_LocalEulerAnglesHint: {x: 0, y: 42.424, z: 0}
+--- !u!136 &1738475994707271030
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7591838853333252464}
+  m_GameObject: {fileID: 3527456405549404527}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -57,13 +58,13 @@ CapsuleCollider:
   m_Height: 2.0319731
   m_Direction: 1
   m_Center: {x: 0, y: 0.51598734, z: -0.100366354}
---- !u!54 &-7776147303548845514
+--- !u!54 &5689085955647282461
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7591838853333252464}
+  m_GameObject: {fileID: 3527456405549404527}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -79,18 +80,31 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!1001 &3245335141834214854
+--- !u!114 &915300436421368264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527456405549404527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d997fe614ba5c964db78409d403feb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+--- !u!1001 &2427252562977638601
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3418552296217812923}
+    m_TransformParent: {fileID: 5344359707141455389}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a2ef474392ac74f409c70c61ccb6c24a, type: 3}
       propertyPath: m_RootOrder
@@ -145,8 +159,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2ef474392ac74f409c70c61ccb6c24a, type: 3}
---- !u!4 &3063299183288232493 stripped
+--- !u!4 &2748862795311034146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2ef474392ac74f409c70c61ccb6c24a, type: 3}
-  m_PrefabInstance: {fileID: 3245335141834214854}
+  m_PrefabInstance: {fileID: 2427252562977638601}
   m_PrefabAsset: {fileID: 0}

@@ -19,7 +19,7 @@ public class Spawn : MonoBehaviour
     void spawn()
     {
         index = Random.Range(0, Animals.Length);
-        position = new Vector3(Random.Range(0, 20), 10, Random.Range(80, 90));
+        position = new Vector3(Random.Range(-40, -30), 10, Random.Range(100, 155));
         Quaternion Rotation = Quaternion.Euler(0, 0, 0);
         Instantiate(Animals[index], position, Rotation);
     }

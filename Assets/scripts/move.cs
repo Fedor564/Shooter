@@ -5,11 +5,20 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     public int Speed = 5;
-    public GameObject player;
-    // Update is called once per frame
+    private Transform player;
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+
+
+    }
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
-        transform.LookAt(player.transform);
+        transform.LookAt(player);
+        if (transform.position.x > 17)
+        {
+            Destroy(gameObject);
+        }
     }
 }

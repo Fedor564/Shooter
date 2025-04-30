@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ammofly : MonoBehaviour
 {
-    public float Ammo_speed = 1f;
+    public float Ammo_speed = 5f;
 
     void Update()
     {

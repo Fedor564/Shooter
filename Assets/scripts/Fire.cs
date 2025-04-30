@@ -9,7 +9,7 @@ public class fire : MonoBehaviour
     public AudioSource ReloadSound;
     public AudioSource Shot;
     private bool ISreload = false;
-    private float Reload = 6f;
+    private float Reload = 4f;
     private float Cooldown = 1.5f;
     private int NowAmmo;
     private int MaxAmmo = 4;
@@ -36,20 +36,23 @@ public class fire : MonoBehaviour
             Shot.Play();
             lable.text = "Патроны " + NowAmmo.ToString();
         }
-        if (NowAmmo == 0)
+        if (Input.GetKeyDown(KeyCode.R) & ISreload == false & NowAmmo == 0)
         {
             ISreload = true;
 
         }
-        if (ISreload == true)
+        if (ISreload == true )
         {
-            ReloadSound.Play();
+            if (Reload > 2)
+            {
+                ReloadSound.Play();
+            }
             Reload -= Time.deltaTime;
             if (Reload <= 0)
             {
                 NowAmmo = MaxAmmo;
                 ISreload = false;
-                Reload = 6f;
+                Reload = 4f;
                 lable.text = "Патроны " + NowAmmo.ToString();
             }
         }

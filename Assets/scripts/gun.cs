@@ -6,7 +6,7 @@ public class gun : MonoBehaviour
 {
     private float horizontal;
     private float vertical;
-    private float sensitivity = 1f;
+    private float sensitivity = 1.5f;
     [Range(45f, 135f)][SerializeField] float xLimit;
     [Range(0f, 90f)][SerializeField] float yLimit;
     Vector2 rotation = new Vector2(60f, 0f);
